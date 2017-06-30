@@ -1,0 +1,28 @@
+group 'com.laion'
+version '0.1.0'
+
+buildscript {
+    ext.kotlin_version = '1.1.3'
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8"
+    compile "cloud.orbit:orbit-runtime:1.1.0"
+}
+
+mainClassName = "MainKt"
